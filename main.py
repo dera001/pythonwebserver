@@ -10,6 +10,7 @@ class MyServer(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header("Content-type", "text/html")
         self.end_headers()
+        #testing to see if styles work lol
         self.wfile.write(bytes("<html><head><title>Python Web Server</title></head>", "utf-8"))
         self.wfile.write(bytes(
         "<p style='background-color:#FFFFE0;font-size:50px;text-align:center;'>Request %s</p>" % self.path, "utf-8"))
